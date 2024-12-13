@@ -1,6 +1,5 @@
 # Binary Classification with a Bank Churn Dataset 
 ![UTA-DataScience-Logo](https://github.com/user-attachments/assets/6d626bcc-5430-4356-927b-97764939109d)
-# Overview
 
 ## Project Objective
 - Predict customer churn in a bank using historical customer data.
@@ -9,6 +8,9 @@
   - `0`: Customer remained with the bank.
 - Identify patterns and key factors contributing to customer attrition.
 - Enable proactive customer retention strategies based on predictions.
+
+<img width="488" alt="Screenshot 2024-12-13 at 12 48 51 PM" src="https://github.com/user-attachments/assets/a9d8ab4b-337e-432a-8d03-a37b6e18763a" />
+
 
 ## Data Overview
 - Initial dataset shape 165034 rows and 14 columns
@@ -23,12 +25,6 @@
 
 # Bank Churn Prediction Dataset
 
-## Overview
-This dataset contains customer data for a bank, aiming to predict customer churn (whether a customer will leave the bank). The target variable, `Exited`, indicates customer churn status:
-- `1`: Customer exited.
-- `0`: Customer stayed.
-
-## Data Summary
 
 ### Initial Dataset
 - **Total Rows**: [Initial record count- 165,034]
@@ -73,6 +69,28 @@ This dataset contains customer data for a bank, aiming to predict customer churn
 - Can be used to develop predictive models using algorithms like Random Forest, Logistic Regression, or Neural Networks.
 
 ## Visualization Highlights
-- Histograms reveal how each feature varies between the classes (`Exited = 0` and `Exited = 1`).
-- 
+<img width="609" alt="Screenshot 2024-12-13 at 12 12 40 PM" src="https://github.com/user-attachments/assets/4ab01e0e-eb81-4932-8a8a-97ad2e867288" />
+<img width="592" alt="Screenshot 2024-12-13 at 1 10 34 PM" src="https://github.com/user-attachments/assets/0ae5984c-3d8b-446a-9b74-d9733417568e" />
+
+# ROC Curve 
+
+<img width="578" alt="Screenshot 2024-12-13 at 1 28 13 PM" src="https://github.com/user-attachments/assets/d5eade03-d9ba-4173-a15c-20db3e1078ea" />
+
+
+### Random Forest Classifier Performance
+- **ROC Curve**:
+  - The model achieved an **AUC (Area Under the Curve)** of **0.87**, indicating strong performance in distinguishing between customers who exited and those who stayed.
+  - The curve is close to the top-left corner, showing an effective balance between True Positive Rate (TPR) and False Positive Rate (FPR).
+
+- **Model Evaluation**:
+  - The model effectively identifies churned customers while maintaining a low rate of false positives.
+  - Results suggest the Random Forest classifier is well-suited for this dataset.
+
+- **Threshold Adjustment**:
+  - Depending on business needs, the threshold can be tuned to prioritize sensitivity (capturing more churned customers) or specificity (reducing false positives).
+
+### Implications
+- A high AUC score of **0.87** highlights the model's strong predictive capabilities.
+- Features such as `Age`, `Balance`, and `NumOfProducts` are influential in predicting customer churn.
+- Future work could involve hyperparameter tuning or feature engineering to further improve the model's performance.
 
